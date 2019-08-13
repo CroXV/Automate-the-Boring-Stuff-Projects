@@ -7,7 +7,7 @@ import os
 import time
 
 
-def open_browser():
+def image_downloader():
     search = input('What images would you like for me to download?\n> ')
     new_dir = make_new_dir(search)
 
@@ -55,4 +55,5 @@ def parse_url(img):
     return url, img_name
 
 
-open_browser()
+if __name__ == '__main__':
+    image_downloader()
