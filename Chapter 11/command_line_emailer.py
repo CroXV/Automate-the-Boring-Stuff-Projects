@@ -33,6 +33,7 @@ def open_browser():
     # waits until message is sent before exiting browser
     time.sleep(5)
     browser.quit()
+    print('Message was sent successfully!')
 
 
 def open_bot_mail(browser, bot_email, botpass):
