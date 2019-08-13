@@ -74,10 +74,8 @@ def compose_message(browser, email, rec_subject, rec_message):
 
 
 def bot_info():
-    info = load_botinfo()
-    if info:
-        return info
-    elif len(sys.argv) == 3:
+    saved = load_botinfo()
+    if len(sys.argv) == 3:
         bot_email = sys.argv[1]
         botpass = sys.argv[2]
 
@@ -86,6 +84,8 @@ def bot_info():
             return bot_email, botpass
         else:
             raise Exception('Invalid email address.')
+    elif saved:
+        return saved
     else:
         raise Exception('Not enough arguments.')
 
