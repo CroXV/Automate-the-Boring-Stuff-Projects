@@ -17,7 +17,7 @@ def image_downloader():
     browser.get(f'https://flicker.com/search/?text={search}')
     browser.find_element_by_tag_name('html').send_keys(Keys.END)
 
-    # Wait before getting source
+    # Wait for things to load before getting source
     time.sleep(2)
     source = browser.page_source
     browser.quit()
