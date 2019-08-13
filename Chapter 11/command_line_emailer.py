@@ -43,8 +43,8 @@ def open_bot_mail(browser, bot_email, botpass):
     email.send_keys(Keys.ENTER)
 
     # Enter password
-    add_delay(browser, By.ID, 'password')
-    password = browser.find_element_by_name('password')
+    add_delay(browser, By.CSS_SELECTOR, 'input[type="password"]')
+    password = browser.find_element_by_css_selector('input[type="password"]')
     password.send_keys(botpass)
     password.send_keys(Keys.ENTER)
 
