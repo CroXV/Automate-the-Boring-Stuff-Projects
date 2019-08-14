@@ -9,8 +9,7 @@ import re
 
 def link_verfication():
     if len(sys.argv) == 1:
-        # link = sys.argv[1]
-        link = 'http://inventwithpython.com/'
+        link = sys.argv[1]
 
         try:
             resp = requests.get(link)
