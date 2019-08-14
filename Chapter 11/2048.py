@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 import time
+import re
 
 
 def play_game():
@@ -16,10 +17,18 @@ def play_game():
         page.send_keys(Keys.LEFT)
 
         if game_over(browser):
-            print('Game Over!')
-            time.sleep(3)
-            browser.quit()
-            break
+            score = browser.find_element_by_class_name('score-container')
+            score = re.compile(r'\d+').search(score.text)
+            print(f'Game Over! Score: {score.group()}')
+            time.sleep(5)
+            retry(browser)
+
+
+def retry(browser):
+    try:
+        browser.find_element_by_class_name('retry-button').click()
+    except NoSuchElementException:
+        pass
 
 
 def game_over(browser):
