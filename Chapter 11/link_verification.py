@@ -8,7 +8,7 @@ import re
 
 
 def link_verfication():
-    if len(sys.argv) == 1:
+    if len(sys.argv) == 2:
         link = sys.argv[1]
 
         try:
