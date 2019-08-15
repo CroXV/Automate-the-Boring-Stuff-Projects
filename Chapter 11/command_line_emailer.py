@@ -1,4 +1,4 @@
-#! python3
+#! /usr/bin/env python
 # Usage: py.exe command_line_emailer.py <botmail> <botpass>
 
 from selenium import webdriver

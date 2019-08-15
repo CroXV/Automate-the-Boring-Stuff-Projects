@@ -1,4 +1,4 @@
-#! python3
+#! /usr/bin/env python
 # Usage: py.exe link_verification.py <link>
 
 import sys
