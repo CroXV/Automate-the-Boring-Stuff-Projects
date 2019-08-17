@@ -1,6 +1,7 @@
+.idea/
 venv/
 images/
-.idea/
+
 *.json
 *.log
 *.xlsx
