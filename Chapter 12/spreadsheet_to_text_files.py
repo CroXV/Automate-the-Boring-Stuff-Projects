@@ -11,5 +11,4 @@ ws = wb.active
 for index, col in enumerate(ws.columns, start=1):
     with open(f'Column {gcl(index)}.txt', 'w') as file:
         for cell in col:
-            print(cell.value)
             file.write(f'{cell.value}\n')
