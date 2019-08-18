@@ -11,9 +11,9 @@ else:
     file = input('Enter Workbook path:\n> ')
 
 
-wb = openpyxl.load_workbook(file)
-ws = wb.active
-ws2 = wb.create_sheet()     # create empty worksheet
+wb = openpyxl.load_workbook(file)       # load file
+ws = wb.active                          # get first worksheet
+ws2 = wb.create_sheet()                 # create empty worksheet
 
 
 for row in range(1, ws.max_row + 1):
